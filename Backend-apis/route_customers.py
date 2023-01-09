@@ -3,10 +3,11 @@ from random import randrange
 from hashlib import sha256
 import json
 from route_admin import checkAdmin
+from connection import returnDb
 
 # Getting DB connection
 mycon, myCursor = connection.getConnection()
-myCursor.execute("USE kuchbhi")
+myCursor.execute(f"USE {returnDb()}")
 
 # Getting email from session token
 def tokenToMail(sid):

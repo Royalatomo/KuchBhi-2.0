@@ -3,10 +3,11 @@ from random import randrange
 from hashlib import sha256
 from route_admin import checkAdmin
 import datetime as dt
+from connection import returnDb
 
 # Getting DB connection
 mycon, myCursor = connection.getConnection()
-myCursor.execute("USE kuchbhi")
+myCursor.execute(f"USE {returnDb()}")
 
 
 SHIPPING = {

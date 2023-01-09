@@ -2,10 +2,11 @@
 from random import randrange
 from hashlib import sha256
 import connection
+from connection import returnDb
 
 # Getting DB connection
 mycon, myCursor = connection.getConnection()
-myCursor.execute("USE kuchbhi")
+myCursor.execute(f"USE {returnDb()}")
 
 # Code used for adding new admin
 SECRET_CODE = "kuchbhiadmin"

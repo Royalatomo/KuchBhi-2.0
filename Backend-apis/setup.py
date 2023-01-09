@@ -1,21 +1,22 @@
 from hashlib import sha256
+from connection import returnDb
 
 # Getting DB connection
 import connection
 mycon, myCursor = connection.getConnection()
 
 # Checking if db exists
-myCursor.execute("Show databases")
+# myCursor.execute(f"Show {returnDb()}")
 
-for db in myCursor:
-    # if db exists, drop it
-    if(db[0] == "kuchbhi"):
-        myCursor.reset()
-        myCursor.execute("DROP DATABASE kuchbhi")
+# for db in myCursor:
+#     # if db exists, drop it
+#     if(db[0] == returnDb()):
+#         myCursor.reset()
+#         myCursor.execute(f"DROP DATABASE {returnDb()}")
 
-# Create new database and use it
-myCursor.execute("CREATE DATABASE kuchbhi")
-myCursor.execute("use kuchbhi")
+# # Create new database and use it
+# myCursor.execute(f"CREATE DATABASE {returnDb()}")
+myCursor.execute(f"use {returnDb()}")
 
 # --- Creating Tables ---
 

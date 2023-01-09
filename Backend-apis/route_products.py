@@ -5,10 +5,11 @@ from hashlib import sha256
 from random import randrange
 from route_admin import checkAdmin
 from route_customers import tokenToMail
+from connection import returnDb
 
 # Getting DB connection
 mycon, myCursor = connection.getConnection()
-myCursor.execute("USE kuchbhi")
+myCursor.execute(f"USE {returnDb()}")
 
 
 # Adding Product

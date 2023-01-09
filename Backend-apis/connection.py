@@ -13,3 +13,6 @@ myCursor = mycon.cursor()
 # Giving Connection to the database
 def getConnection():
     return mycon, myCursor
+
+def returnDb():
+    return "kuchbhi"
