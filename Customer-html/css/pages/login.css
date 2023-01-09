@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Roboto Slab", sans-serif;
+  width: 100vw;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent; }
+
+a {
+  text-decoration: none;
+  color: black; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Inter", sans-serif;
+  word-spacing: 2px; }
+
+h2 {
+  font-size: 33px;
+  color: #1e1e1e;
+  text-shadow: 1px 1px 2px #ff6767; }
+
+.btn-pop {
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  border: none;
+  background: #fd1745;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: 3px 5px 6px #4a4a4a;
+  transform: translateY(-3px);
+  transition: all 0.2s linear;
+  cursor: pointer;
+  border-radius: 5px; }
+  .btn-pop:hover {
+    transform: translateY(0);
+    box-shadow: 0px 0px 2px #4a4a4a;
+    background: #ff0033; }
+
+input:focus {
+  outline: none; }
+
+body {
+  background-color: #f3f3f3; }
+
+.container {
+  background-color: white;
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  padding: 4rem;
+  display: flex;
+  min-width: 70vw;
+  border-radius: 20px; }
+  @media screen and (max-width: 1300px) {
+    .container {
+      min-width: 80vw; } }
+  @media screen and (max-width: 990px) {
+    .container {
+      min-width: 95vw; } }
+  .container .information {
+    min-width: fit-content;
+    width: 100%; }
+    @media screen and (max-width: 990px) {
+      .container .information {
+        width: 50%; } }
+    @media screen and (max-width: 850px) {
+      .container .information {
+        width: 100%; } }
+  .container .msg-box {
+    display: flex;
+    justify-content: space-between; }
+    .container .msg-box .err-msg {
+      visibility: hidden;
+      color: red;
+      margin-bottom: 10px;
+      font-family: "Inter", sans-serif; }
+      .container .msg-box .err-msg .active {
+        visibility: visible; }
+    .container .msg-box .forget-pass {
+      display: inline-block;
+      text-align: right;
+      color: #fd1745;
+      margin-bottom: 1rem; }
+      .container .msg-box .forget-pass:hover {
+        text-decoration: underline; }
+
+.container .head {
+  margin-bottom: 2rem; }
+  .container .head .logo {
+    display: inline-block;
+    margin-bottom: 2rem; }
+    .container .head .logo img {
+      width: 105px; }
+  .container .head .title {
+    font-size: 2rem;
+    margin-bottom: 10px; }
+  .container .head .text {
+    font-size: 16px;
+    color: gray; }
+
+.container .body .field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem; }
+  .container .body .field label {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "Inter", sans-serif;
+    color: #363535;
+    margin-bottom: 10px; }
+  .container .body .field input {
+    height: 30px;
+    font-size: 18px;
+    padding: 19px 11px;
+    border-radius: 20rem;
+    border: 2px solid #b1acac;
+    color: #373737; }
+    .container .body .field input:focus {
+      border-color: #fd1745; }
+  .container .body .field .password {
+    position: relative;
+    font-size: 18px;
+    padding: 7px 0px;
+    border-radius: 20rem;
+    border: 2px solid #b1acac;
+    color: #373737;
+    padding-right: 2.5rem; }
+    .container .body .field .password input#pass {
+      border: none;
+      width: 100%;
+      height: 100%;
+      font-size: 18px;
+      padding: 0 15px; }
+      .container .body .field .password input#pass:focus {
+        outline: 0; }
+    .container .body .field .password i {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      margin-right: 1rem;
+      z-index: 3;
+      cursor: pointer;
+      color: #777777; }
+  .container .body .field .password:focus-within {
+    border-color: #fd1745; }
+
+.container .foot button {
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 9px;
+  font-size: 20px;
+  border-radius: 30rem;
+  border: 2px solid #fd1745;
+  background: #fff;
+  color: #fd1745;
+  font-weight: bold;
+  transition: all 0.2s linear;
+  cursor: pointer; }
+  .container .foot button:hover {
+    background: #fd1745;
+    color: white; }
+
+.container .foot .register {
+  color: #444444;
+  font-family: "Inter", sans-serif; }
+  .container .foot .register a {
+    color: #fd1745;
+    margin-left: 5px;
+    text-decoration: underline; }
+
+.display {
+  margin-left: 3rem;
+  display: flex;
+  align-items: flex-end;
+  background: #ff5f7f;
+  border-radius: 16px;
+  padding: 10px 20px 0; }
+  @media screen and (max-width: 990px) {
+    .display {
+      width: 50%; } }
+  @media screen and (max-width: 850px) {
+    .display {
+      display: none; } }
+  .display img {
+    min-width: 50%;
+    max-width: 400px; }
+    @media screen and (max-width: 1200px) {
+      .display img {
+        max-width: 340px; } }
+    @media screen and (max-width: 1060px) {
+      .display img {
+        max-width: 280px; } }
+    @media screen and (max-width: 990px) {
+      .display img {
+        width: 100%; } }
+
+.container.register {
+  margin: 4rem 0;
+  width: 90vw;
+  position: relative; }
+  .container.register .information.register {
+    width: 50%; }
+    @media screen and (max-width: 1040px) {
+      .container.register .information.register {
+        width: 100%; } }
+  .container.register .display.register {
+    width: 50%;
+    min-width: 420px; }
+    .container.register .display.register img {
+      width: 100%;
+      max-width: unset; }
+    @media screen and (max-width: 1040px) {
+      .container.register .display.register {
+        display: none; } }

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Dashboard</title>
+    <script src="https://kit.fontawesome.com/2e90a300f2.js" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+    <link rel="stylesheet" href="/css/pages/orders.css">
+</head>
+
+<body>
+    <main>
+
+        <section class="left">
+            <img src="/resources/logo.png" alt="logo">
+
+            <div class="nav-menu">
+                <a href="/" class="link">
+                    <i class="fa-solid fa-gauge"></i>
+                    <p class="text">Dashboard</p>
+                </a>
+
+                <a href="/products.html" class="link">
+                    <i class="fa-solid fa-shirt"></i>
+                    <p class="text">Products</p>
+                </a>
+
+                <a href="/customers.html" class="link">
+                    <i class="fa-solid fa-user-group"></i>
+                    <p class="text">Customers</p>
+                </a>
+
+                <a href="#" class="link active">
+                    <i class="fa-solid fa-box"></i>
+                    <p class="text">Orders</p>
+                </a>
+            </div>
+
+            <button class="logout">Logout</button>
+        </section>
+        <section class="right">
+            <header>
+                <button class="toggle-sidebar"><i class="fa-solid fa-bars"></i></button>
+
+                <h1>Orders</h1>
+
+                <div class="user-profile">
+                    <img src="/resources/profile.webp" alt="profile">
+                    <div class="info">
+                        <p class="name"></p>
+                        <p class="desc">Super Admin</p>
+                    </div>
+                </div>
+            </header>
+
+            <div class="box">
+                <div class="order-popup">
+                    <div class="popup-head">
+                        <button class="popup-back">Back</button>
+                        <p class="order-num">Order Id: <span>#1</span></p>
+                    </div>
+                    <div class="popup-body">
+                        <p class="popup-date">Date: <span>04 Aug 2022</span></p>
+                        <div class="order-product">
+                            <div class="popup-image">
+                                <img src="/resources/camera.jpg" alt="product">
+                                <a href="/product.html" target="_blank">View Product</a>
+                            </div>
+
+                            <div class="popup-info">
+                                <h1 class="popup-title">2022 New HP 15 Laptop</h1>
+                                <p class="popup-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+                                    assumenda, dicta nostrum sit quod placeat et quia labore ut, nam porro pariatur
+                                    blanditiis ad tenetur ipsum deleniti optio repellat animi?</p>
+                                <p class="popup-qty">Qty <span>2</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup-foot">
+
+                        <div class="pop-info-container">
+                            <p class="popup-status">Status <span class=""></span></p>
+                            <p class="popup-item name">Name <span class="blue"></span></p>
+                            <p class="popup-item mobile">Mobile <span class="green"></span></p>
+                            <p class="popup-item address">Address <span class="orange"></span></p>
+                            <p class="popup-item email">Email <span class="red"></span></p>
+                        </div>
+
+                        <div class="charges-chart">
+                            <h1>All Charges</h1>
+                            <div class="charge price">
+                                <p class="charge-desc">Price</p>
+                                <p class="charge-value">₹ 40,000</p>
+                            </div>
+
+                            <div class="charge shipping">
+                                <p class="charge-desc">Shipping</p>
+                                <p class="charge-value">Free</p>
+                            </div>
+
+                            <div class="charge discount">
+                                <p class="charge-desc">Discount</p>
+                                <p class="charge-value">- ₹ 500</p>
+                            </div>
+
+                            <div class="charge tax">
+                                <p class="charge-desc">GST</p>
+                                <p class="charge-value">+ ₹ 7,020</p>
+                            </div>
+
+                            <div class="charge total">
+                                <p class="charge-desc">Customer Cost</p>
+                                <p class="charge-value">₹ 47,020</p>
+                            </div>
+                            
+                            <div class="charge revenue">
+                                <p class="charge-desc">Total Revenue</p>
+                                <p class="charge-value">₹ 47,020</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+
+                    <div class="search-box">
+                        <input type="text" class="input" placeholder="Order Id or Customer Id">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+
+                    <select class="sorting">
+                        <option value="">All Orders</option>
+                        <option value="0">Pending</option>
+                        <option value="1">Processing</option>
+                        <option value="2">Completed</option>
+                        <option value="3">Cancelled</option>
+                    </select>
+                </div>
+
+                <div class="orders-container"></div>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="/js/sidebar.js" type="module"></script>
+    <script src="/js/orders.js" type="module"></script>
+</body>
+
+</html>

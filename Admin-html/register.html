@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | KuchBhi</title>
+    <script src="https://kit.fontawesome.com/2e90a300f2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/pages/login-register.css">
+</head>
+
+<body>
+    <section class="container">
+        <div class="information">
+            <div class="head">
+                <h1 class="title">Register</h1>
+                <p class="text">Admin Registeration Page</p>
+            </div>
+
+            <div class="body">
+                <div class="field">
+                    <input type="text" id="name" placeholder="Full Name">
+                </div>
+
+                <div class="field">
+                    <input type="email" id="email" placeholder="Email Address">
+                </div>
+
+                <div class="field">
+                    <div class="password">
+                        <input type="password" id="pass" placeholder="Password">
+                        <i class="fa-solid fa-eye eye"></i>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <input type="text" id="secret" placeholder="Secret Code">
+                </div>
+            </div>
+
+            <div class="msg-box">
+                <p class="err-msg">Username does not exist</p>
+            </div>
+
+            <div class="foot">
+                <button class="login">Register</button>
+                <p class="register">Already have an account? <a href="login.html">Login</a></p>
+            </div>
+        </div>
+
+        <div class="display">
+        </div>
+    </section>
+
+    <script src="/js/register.js" type="module"></script>
+</body>
+
+</html>

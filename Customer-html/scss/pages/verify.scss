@@ -1,0 +1,67 @@
+@import "../default.scss";
+
+#error {
+  margin-bottom: 10px;
+  color: red;
+  text-transform: capitalize;
+  visibility: hidden;
+}
+
+.head {
+  margin: 0 2rem;
+
+  .logo {
+    height: 70px;
+    display: inline-block;
+    margin: 4rem 0;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  .title {
+    font-family: "Roboto Slab";
+    font-weight: 700;
+    word-spacing: 10px;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .text {
+    color: #1f1f1f;
+    font-family: "Inter";
+    text-align: center;
+  }
+}
+
+.otp-container {
+  display: flex;
+  width: 260px;
+  margin: 3rem auto;
+  justify-content: center;
+  flex-direction: column;
+
+  input {
+    font-size: 2rem;
+    letter-spacing: 15px;
+    padding: 9px 25px;
+    margin-bottom: 1.5rem;
+  }
+
+  button {
+    font-size: 20px;
+    font-family: "Inter";
+    padding: 10px 0;
+    border: 3px solid #fd1745;
+    background: #fd1745;
+    color: white;
+    cursor: pointer;
+  }
+
+  button.resend {
+    margin-top: 15px;
+    background: #595959;
+    border-color: #595959;
+  }
+}

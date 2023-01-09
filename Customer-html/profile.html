@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KuchBhi | User Profile</title>
+    <script src="https://kit.fontawesome.com/2e90a300f2.js" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+    <link rel="stylesheet" href="/css/pages/profile.css">
+</head>
+
+<body>
+    <header>
+        <a href="/"><img src="/resource/logo.png" alt="logo" class="logo"></a>
+    </header>
+
+    <main>
+        <section class="user-profile">
+            <div class="box">
+                <img src="https://ik.imagekit.io/imdfhuoko/loading_EVWALDndS.gif" alt="profile photo" class="profile">
+                <div class="text-info">
+                    <p class="name"></p>
+                    <p class="email"></p>
+                    <p class="mobile"></p>
+                    <p class="location"></p>
+                </div>
+
+                <div class="profile-btns">
+                    <button class="edit-profile">Edit Profile</button>
+                    <button class="logout">Logout</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="user-orders">
+            <div class="order-popup">
+                <div class="popup-head">
+                    <button class="popup-back">Back</button>
+                    <p class="order-num">Order Id: <span>#1</span></p>
+                </div>
+                <div class="popup-body">
+                    <p class="popup-date">Date: <span>04 Aug 2022</span></p>
+                    <div class="order-product">
+                        <div class="popup-image">
+                            <img src="https://ik.imagekit.io/imdfhuoko/loading_EVWALDndS.gif" alt="product">
+                            <a href="/product.html" target="_blank">View Product</a>
+                        </div>
+
+                        <div class="popup-info">
+                            <h1 class="popup-title"></h1>
+                            <p class="popup-desc"></p>
+                            <p class="popup-qty">Qty <span></span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-foot">
+                    <p class="popup-status">Status <span class="delivered"></span></p>
+
+                    <div class="charges-chart">
+                        <h1>All Charges</h1>
+                        <div class="charge price">
+                            <p class="charge-desc">Price</p>
+                            <p class="charge-value">₹ 0</p>
+                        </div>
+
+                        <div class="charge shipping">
+                            <p class="charge-desc">Shipping</p>
+                            <p class="charge-value">- ₹ 0</p>
+                        </div>
+
+                        <div class="charge discount">
+                            <p class="charge-desc">Discount</p>
+                            <p class="charge-value">- ₹ 0</p>
+                        </div>
+
+                        <div class="charge tax">
+                            <p class="charge-desc">GST (Tax) 18%</p>
+                            <p class="charge-value">+ ₹ 0</p>
+                        </div>
+
+                        <div class="charge final">
+                            <p class="charge-desc">Total Amount</p>
+                            <p class="charge-value">₹ 0</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="head">
+                <h1 class="title">Your Orders</h1>
+                <div class="sort">
+                    <p class="text">Show</p>
+                    <span class="selected">All Orders</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                    <div class="drop-menu">
+                        <div class="item all" data-value="all">All Orders</div>
+                        <div class="item delivered" data-value="2">Delivered</div>
+                        <div class="item processing" data-value="1">Processing</div>
+                        <div class="item pending" data-value="0">Pending</div>
+                        <div class="item cancelled" data-value="3">Cancelled</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="body">
+                <img class="loading" src="https://ik.imagekit.io/imdfhuoko/loading_EVWALDndS.gif?ik-sdk-version=javascript-1.4.3&updatedAt=1661905107346" alt="loading">
+            </div>
+        </section>
+    </main>
+
+    <div class="profile-edit-menu">
+        <div class="profile-updater">
+            <img src="https://ik.imagekit.io/imdfhuoko/loading_EVWALDndS.gif" alt="" class="updater-img">
+            <input type="text" id="image" placeholder="Image Link">
+            <input type="text" id="name" placeholder="Full Name">
+            <input type="text" id="mobile" placeholder="Mobile Number">
+            
+            <label for="updater-address">Address</label>
+            <input type="text" id="location" placeholder="address">
+
+            <div class="buttons-profile">
+                <button class="save-profile">Save</button>
+                <button class="cancel-profile">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="services">
+            <h2>Services To Help You Shop</h2>
+
+            <div class="service-cards">
+                <div class="card red">
+                    <h4 class="card-heading">Frequently Asked Questions</h4>
+                    <p class="card-desc">Curious about KuchBhi? Ask us anything about our brand and product, and get
+                        factual responses</p>
+                    <button class="action btn-pop">Explore FAQs</button>
+                </div>
+
+                <div class="card yellow">
+                    <h4 class="card-heading">Online Payment Process</h4>
+                    <p class="card-desc">While Shopping on KuchBhi, You can Pay with Kuchbhi! All Types Of Payment Mode
+                        accepted</p>
+                    <button class="action btn-pop">Need Help?</button>
+                </div>
+
+                <div class="card green">
+                    <h4 class="card-heading">Home Delivery Option</h4>
+                    <p class="card-desc">If you have an address we got your covered, Get your orders delivered right on
+                        your door</p>
+                    <button class="action btn-pop">Delivery Partners</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="info">
+            <div class="social-icons">
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </div>
+
+            <p>KuchBhi &copy; All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="/js/profile.js" type="module"></script>
+</body>
+
+</html>

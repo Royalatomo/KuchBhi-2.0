@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KuchBhi | Login Page</title>
+    <script src="https://kit.fontawesome.com/2e90a300f2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/pages/login.css">
+</head>
+<body>
+    <section class="container">
+        <div class="information">
+            <div class="head">
+                <a href="/" class="logo">
+                    <img src="/resource/logo.png" alt="KuchBhi Logo">
+                </a>
+                <h1 class="title">Login</h1>
+                <p class="text">Welcome user please login to your account</p>
+            </div>
+
+            <div class="body">
+
+                <div class="field">
+                    <label for="email">Email*</label>
+                    <input type="email" id="email" placeholder="someone@email.com">
+                </div>
+
+                <div class="field">
+                    <label for="pass">Password*</label>
+
+                    <div class="password">
+                        <input type="password" id="pass" placeholder="xxxxxx">
+                        <i class="fa-solid fa-eye eye"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="msg-box">
+                <p class="err-msg">Username does not exist</p>
+            </div>
+
+            <div class="foot">
+                <button class="login">Login</button>
+                <p class="register">New To KuchBhi? <a href="register.html">Register</a></p>
+            </div>
+        </div>
+
+        <div class="display">
+            <img src="/resource/login/p1.svg" alt="">
+        </div>
+    </section>
+
+    <script src="/js/login.js" type="module"></script>
+</body>
+</html>

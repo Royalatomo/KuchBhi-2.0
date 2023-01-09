@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Dashboard</title>
+    <script src="https://kit.fontawesome.com/2e90a300f2.js" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+    <link rel="stylesheet" href="/css/pages/products.css">
+</head>
+
+<body>
+    <main>
+
+        <section class="left">
+            <img src="/resources/logo.png" alt="logo">
+
+            <div class="nav-menu">
+                <a href="/" class="link">
+                    <i class="fa-solid fa-gauge"></i>
+                    <p class="text">Dashboard</p>
+                </a>
+
+                <a href="#" class="link active">
+                    <i class="fa-solid fa-shirt"></i>
+                    <p class="text">Products</p>
+                </a>
+
+                <a href="/customers.html" class="link">
+                    <i class="fa-solid fa-user-group"></i>
+                    <p class="text">Customers</p>
+                </a>
+
+                <a href="/orders.html" class="link">
+                    <i class="fa-solid fa-box"></i>
+                    <p class="text">Orders</p>
+                </a>
+            </div>
+
+            <button class="logout">Logout</button>
+        </section>
+        <section class="right">
+            <header>
+                <button class="toggle-sidebar"><i class="fa-solid fa-bars"></i></button>
+
+                <h1>Products</h1>
+
+                <div class="user-profile">
+                    <img src="/resources/profile.webp" alt="profile">
+                    <div class="info">
+                        <p class="name"></p>
+                        <p class="desc">Super Admin</p>
+                    </div>
+                </div>
+            </header>
+
+            <div class="box">
+                <div class="product-popup">
+                    <div class="popup-head">
+                        <button class="popup-back">Back</button>
+
+                        <span>
+                            <button class="popup-delete">Delete</button>
+                            <button class="popup-save">Save</button>
+                        </span>
+                    </div>
+                    <div class="popup-body">
+
+                        <div class="row">
+                            <div class="popup-name">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" placeholder="Product's Name">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="popup-stars">
+                                <label for="stars">Stars</label>
+                                <select id="stars">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+
+                            <div class="popup-reviews">
+                                <label for="reviews">Reviews</label>
+                                <input type="number" id="reviews" placeholder="Total Reviews">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="popup-qty">
+                                <label for="qty">Qty</label>
+                                <input type="number" id="qty" placeholder="Total Qty">
+                            </div>
+
+                            <div class="popup-price">
+                                <label for="qty">Price (₹)</label>
+                                <input type="number" id="price" placeholder="Product's Price">
+                            </div>
+                        </div>
+
+                        <div class="popup-desc">
+                            <label for="desc">Description</label>
+                            <textarea id="desc" cols="20" rows="6" placeholder="Product Description"></textarea>
+                        </div>
+
+                        <div class="popup-image">
+                            <label for="image">Product Images</label>
+                            <input type="text" id="image" placeholder="Image Link...">
+                            <input type="text" id="image" placeholder="Image Link...">
+                            <input type="text" id="image" placeholder="Image Link...">
+                            <input type="text" id="image" placeholder="Image Link...">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="sorting-container">
+                    <button id="create-product">Add New</button>
+
+                    <select class="sorting">
+                        <option value="">Recent</option>
+                        <option value="lh">Qty - L to H</option>
+                        <option value="hl">Qty - H to L</option>
+                    </select>
+                </div>
+
+                <div class="products-container"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="/js/sidebar.js" type="module"></script>
+    <script src="/js/product.js" type="module"></script>
+</body>
+
+</html>

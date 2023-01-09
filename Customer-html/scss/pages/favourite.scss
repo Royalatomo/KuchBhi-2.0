@@ -1,0 +1,48 @@
+@import "../default.scss";
+@import "../header.scss";
+@import "../footer.scss";
+@import "../product-card.scss";
+
+.products-area {
+  .page-changer {
+    margin: 0 auto;
+    width: fit-content;
+    margin-top: 3.5rem;
+    user-select: none;
+
+    span {
+      display: inline-block;
+      font-size: 25px;
+      padding: 7px 17px;
+      border-radius: 50%;
+      background: #ededed;
+      cursor: pointer;
+      transition: all 0.2s linear;
+      margin: 7px;
+
+      &:hover {
+        background: #ff9cb0;
+      }
+
+      &.active {
+        background: #fd1745;
+        color: white;
+
+        &:hover {
+          background: #fd1745;
+        }
+      }
+    }
+
+    i {
+      cursor: pointer;
+      font-size: 20px;
+      margin-left: 10px;
+      background: #ededed;
+      outline: 2px solid #2c2c2c;
+      padding: 9px 13px;
+      border-radius: 50%;
+      color: #2c2c2c;
+    }
+  }
+}

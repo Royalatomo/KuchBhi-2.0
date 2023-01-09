@@ -1,0 +1,74 @@
+
+@import "../default.scss";
+@import "../header.scss";
+@import "../footer.scss";
+@import "../product-card.scss";
+
+.banner {
+  background-image: url(/resource/bg1.svg);
+  height: 70vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  
+  @media screen and (max-width: 1060px) {
+    justify-content: center;
+    padding: 0 2rem;
+    
+    .left-area {
+      display: none;
+    }
+
+    .right-area {
+      display: grid;
+    }
+  }
+
+  .left-area {
+    height: 80%;
+    width: 50%;
+    margin-right: 2rem;
+
+    @media screen and (max-width: 1200px) {
+      height: 352px;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+
+  }
+
+  .right-area {
+    @media screen and (max-width: 1070px) {
+      h1 {
+        font-size: 2.6rem;
+      }
+
+      p {
+        max-width: 30rem;
+        font-size: 19px;
+      }
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+
+      span {
+        color: #dc143c;
+        text-shadow: 2px 2px 2px #3c0000;
+      }
+    }
+
+    p {
+      max-width: 34rem;
+      font-size: 21px;
+      letter-spacing: 0.5px;
+      word-spacing: 0.5px;
+      line-height: 1.4;
+      margin-bottom: 2rem;
+    }
+  }
+}

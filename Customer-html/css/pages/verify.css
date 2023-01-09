@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Roboto Slab", sans-serif;
+  width: 100vw;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent; }
+
+a {
+  text-decoration: none;
+  color: black; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Inter", sans-serif;
+  word-spacing: 2px; }
+
+h2 {
+  font-size: 33px;
+  color: #1e1e1e;
+  text-shadow: 1px 1px 2px #ff6767; }
+
+.btn-pop {
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  border: none;
+  background: #fd1745;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: 3px 5px 6px #4a4a4a;
+  transform: translateY(-3px);
+  transition: all 0.2s linear;
+  cursor: pointer;
+  border-radius: 5px; }
+  .btn-pop:hover {
+    transform: translateY(0);
+    box-shadow: 0px 0px 2px #4a4a4a;
+    background: #ff0033; }
+
+input:focus {
+  outline: none; }
+
+#error {
+  margin-bottom: 10px;
+  color: red;
+  text-transform: capitalize;
+  visibility: hidden; }
+
+.head {
+  margin: 0 2rem; }
+  .head .logo {
+    height: 70px;
+    display: inline-block;
+    margin: 4rem 0; }
+    .head .logo img {
+      height: 100%; }
+  .head .title {
+    font-family: "Roboto Slab";
+    font-weight: 700;
+    word-spacing: 10px;
+    text-align: center;
+    margin-bottom: 1rem; }
+  .head .text {
+    color: #1f1f1f;
+    font-family: "Inter";
+    text-align: center; }
+
+.otp-container {
+  display: flex;
+  width: 260px;
+  margin: 3rem auto;
+  justify-content: center;
+  flex-direction: column; }
+  .otp-container input {
+    font-size: 2rem;
+    letter-spacing: 15px;
+    padding: 9px 25px;
+    margin-bottom: 1.5rem; }
+  .otp-container button {
+    font-size: 20px;
+    font-family: "Inter";
+    padding: 10px 0;
+    border: 3px solid #fd1745;
+    background: #fd1745;
+    color: white;
+    cursor: pointer; }
+  .otp-container button.resend {
+    margin-top: 15px;
+    background: #595959;
+    border-color: #595959; }

@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Roboto Slab", sans-serif;
+  width: 100vw;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent; }
+  body.disabled {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden; }
+
+a {
+  text-decoration: none;
+  color: black; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Inter", sans-serif;
+  word-spacing: 2px; }
+
+h2 {
+  font-size: 33px;
+  color: #1e1e1e;
+  text-shadow: 1px 1px 2px #ff6767; }
+
+.btn-pop {
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  border: none;
+  background: #fd1745;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: 3px 5px 6px #4a4a4a;
+  transform: translateY(-3px);
+  transition: all 0.2s linear;
+  cursor: pointer;
+  border-radius: 5px; }
+  .btn-pop:hover {
+    transform: translateY(0);
+    box-shadow: 0px 0px 2px #4a4a4a;
+    background: #ff0033; }
+
+input:focus {
+  outline: none; }

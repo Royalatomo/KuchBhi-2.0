@@ -1,0 +1,350 @@
+@import "../default.scss";
+@import "../sidebar.scss";
+
+.box {
+  position: relative;
+  height: 100%
+}
+
+.sorting-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 2rem 2rem 3rem;
+
+  select {
+    font-size: 18px;
+    outline: 3px solid #ff005a;
+    border: none;
+    padding: 7px 20px;
+    border-radius: 30rem;
+    background: #ffeef1;
+    outline-offset: -1px;
+  }
+}
+
+.products-container {
+  overflow-y: scroll;
+  margin-right: 10px;
+  padding-bottom: 10px;
+  max-height: 70vh;
+
+  &::-webkit-scrollbar {
+    width: 7px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: rgb(82, 82, 82);
+  }
+}
+
+.product {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 2px solid #c1c1c1;
+  transition: all 0.1s linear;
+  cursor: pointer;
+
+  &:first-child {
+    border-top: none;
+  }
+  
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &:hover {
+    background: #f6f6f6;
+  }
+
+  .box {
+    display: flex;
+    align-items: center;
+
+    .image {
+      display: grid;
+      text-align: center;
+      margin-right: 2rem;
+      min-width: 150px;
+      justify-content: center;
+
+      img {
+        max-height: 150px;
+        max-width: 150px;
+        object-fit: cover;
+      }
+
+      .qty {
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 1rem;
+
+        span {
+          font-weight: 300;
+          color: green;
+        }
+      }
+    }
+  }
+
+  .info {
+    margin-right: 5rem;
+
+    .name {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .desc {
+      margin-bottom: 15px;
+      font-size: 16px;
+      color: #353535;
+    }
+
+    .review {
+      display: flex;
+      align-items: center;
+      font-size: 20px;
+      color: #ff0033;
+
+      p {
+        margin-left: 10px;
+        font-size: 18px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .price {
+    min-width: fit-content;
+    font-size: 25px;
+    color: green;
+    font-family: "Inter";
+    align-self: center;
+    margin-left: auto;
+  }
+}
+
+.product-popup {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 3;
+  background: #fff3e3;
+  padding: 2rem 2rem 5rem;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #e47d06;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: #f7f7f7;
+  }
+
+  &.active {
+    display: block;
+  }
+
+  .popup-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4rem;
+
+    button {
+      font-size: 20px;
+      padding: 8px 24px;
+      background: #4a4a4a;
+      border: none;
+      color: white;
+      font-family: "Inter";
+      letter-spacing: 1px;
+      border-radius: 40rem;
+      outline: 2px solid #4a4a4a;
+      outline-offset: 2px;
+      cursor: pointer;
+      transition: all 0.2s linear;
+
+      &:hover {
+        background-color: darken(#4a4a4a, 7%);
+      }
+
+      &.popup-save {
+        background: #2c9700;
+        outline-color: #2c9700;
+      }
+
+      &.popup-delete {
+        background: #d00000;
+        outline-color: #d00000;
+        margin-right: 2rem;
+
+        &.hidden {
+          display: none;
+        }
+      }
+    }
+
+    p {
+      background: #ffb93a;
+      padding: 8px 24px;
+      border-radius: 4px;
+      font-family: "Inter", sans-serif;
+      font-size: 18px;
+
+      span {
+        font-family: "Roboto";
+        font-weight: 700;
+        margin-left: 5px;
+      }
+    }
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+    width: 100%;
+  }
+
+  .popup-name,
+  .popup-stars,
+  .popup-reviews,
+  .popup-qty,
+  .popup-price {
+    outline: 3px solid #eb991e;
+    background: white;
+    padding-right: 1rem;
+
+    input {
+      font-size: 20px;
+      border: none;
+      margin-left: 14px;
+    }
+  }
+
+  label {
+    display: inline-block;
+    font-size: 20px;
+    padding: 7px 20px;
+    background: #eb991e;
+  }
+
+  .popup-name {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    input {
+      height: 100%;
+      width: 100%;
+      font-size: 20px;
+      border: none;
+      padding-left: 2rem;
+    }
+  }
+
+  .popup-stars {
+    margin-right: 4rem;
+    background: white;
+    outline: 3px solid #eb991e;
+
+    select {
+      font-size: 20px;
+      border: none;
+      margin-left: 10px;
+    }
+  }
+
+  .popup-reviews input {
+    width: 150px;
+  }
+
+  .popup-qty {
+    margin-right: 4rem;
+    input {
+      width: 100px;
+    }
+  }
+
+  .popup-price input {
+    width: 160px;
+  }
+
+  .popup-desc {
+    display: grid;
+    margin-top: 4rem;
+
+    label {
+      width: fit-content;
+      outline: 3px solid #eb991e;
+    }
+
+    textarea {
+      outline: rgb(235, 153, 30) solid 3px;
+      border: none;
+      font-size: 20px;
+      padding: 20px;
+    }
+  }
+
+  .popup-image {
+    display: grid;
+    margin-top: 3rem;
+
+    label {
+      width: fit-content;
+      margin-bottom: 1.5rem;
+    }
+
+    input {
+      font-size: 20px;
+      padding: 10px 20px;
+      border: none;
+      outline: 2px solid #eb991e;
+    }
+  }
+}
+
+#show-more {
+  font-size: 20px;
+  width: fit-content;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+  padding: 5px 20px;
+  color: white;
+  background: #fd1745;
+  border: none;
+  font-family: "Inter";
+  word-spacing: 7px;
+  box-shadow: 1px 2px 8px #717171;
+  cursor: pointer;
+}
+
+#create-product {
+  margin-right: auto;
+  background: #fd1345;
+  color: white;
+  border: 2px solid #ad0000;
+  box-shadow: 2px 2px 5px #939393;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  font-size: 17px;
+  font-family: 'Inter';
+  padding: 5px 16px;
+  border-radius: 10px;
+
+  &:hover {
+    background: #ff2453;
+  }
+}

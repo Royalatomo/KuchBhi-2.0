@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KuchBhi | Register Profile</title>
+    <script src="https://kit.fontawesome.com/2e90a300f2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/pages/login.css">
+</head>
+<body>
+    <section class="container register">
+        <div class="information register">
+            <div class="head">
+                <a href="/" class="logo">
+                    <img src="/resource/logo.png" alt="KuchBhi Logo">
+                </a>
+                <h1 class="title">Register</h1>
+                <p class="text">Welcome user please create your account</p>
+            </div>
+
+            <div class="body">
+
+                <div class="field">
+                    <input type="text" id="name" placeholder="Full Name">
+                </div>
+                
+                <div class="field">
+                    <input type="text" id="mobile" placeholder="mobile number">
+                </div>
+                
+                <div class="field">
+                    <input type="email" id="email" placeholder="email address">
+                </div>
+
+                <div class="field">
+                    <div class="password">
+                        <input type="password" id="pass" placeholder="password">
+                        <i class="fa-solid fa-eye eye"></i>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <input type="password" id="cemail" placeholder="confirm password">
+                </div>
+
+            </div>
+
+            <div class="msg-box">
+                <p class="err-msg">Username does not exist</p>
+            </div>
+
+            <div class="foot">
+                <button class="login register">Register</button>
+                <p class="register">Already Have An Account? <a href="login.html">Login</a></p>
+            </div>
+        </div>
+
+        <div class="display register">
+            <img src="/resource/login/p1.svg" alt="">
+        </div>
+    </section>
+
+    <script src="/js/register.js" type="module"></script>
+</body>
+</html>

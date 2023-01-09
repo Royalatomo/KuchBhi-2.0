@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Dashboard</title>
+    <script src="https://kit.fontawesome.com/2e90a300f2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/pages/customers.css">
+</head>
+
+<body>
+    <main>
+
+        <section class="left">
+            <img src="/resources/logo.png" alt="logo">
+
+            <div class="nav-menu">
+                <a href="/" class="link">
+                    <i class="fa-solid fa-gauge"></i>
+                    <p class="text">Dashboard</p>
+                </a>
+
+                <a href="/products.html" class="link">
+                    <i class="fa-solid fa-shirt"></i>
+                    <p class="text">Products</p>
+                </a>
+
+                <a href="#" class="link active">
+                    <i class="fa-solid fa-user-group"></i>
+                    <p class="text">Customers</p>
+                </a>
+
+                <a href="/orders.html" class="link">
+                    <i class="fa-solid fa-box"></i>
+                    <p class="text">Orders</p>
+                </a>
+            </div>
+
+            <button class="logout">Logout</button>
+        </section>
+
+        <section class="right">
+            <header>
+                <button class="toggle-sidebar"><i class="fa-solid fa-bars"></i></button>
+
+                <h1>Customers</h1>
+
+                <div class="user-profile">
+                    <img src="/resources/profile.webp" alt="profile">
+                    <div class="info">
+                        <p class="name"></p>
+                        <p class="desc">Super Admin</p>
+                    </div>
+                </div>
+            </header>
+
+            <div class="container">
+                <div class="search-box">
+                    <input type="text" class="input" placeholder="Email">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+
+            <div class="customer-container"></div>
+        </section>
+    </main>
+
+    <script src="/js/sidebar.js" type="module"></script>
+    <script src="/js/customer.js" type="module"></script>
+</body>
+
+</html>

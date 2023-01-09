@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Dashboard</title>
+    <script src="https://kit.fontawesome.com/2e90a300f2.js" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+    <link rel="stylesheet" href="/css/pages/dashboard.css">
+</head>
+
+<body>
+    <main>
+        <section class="left">
+            <img src="/resources/logo.png" alt="logo">
+
+            <div class="nav-menu">
+                <a href="#" class="link active">
+                    <i class="fa-solid fa-gauge"></i>
+                    <p class="text">Dashboard</p>
+                </a>
+
+                <a href="/products.html" class="link">
+                    <i class="fa-solid fa-shirt"></i>
+                    <p class="text">Products</p>
+                </a>
+
+                <a href="/customers.html" class="link">
+                    <i class="fa-solid fa-user-group"></i>
+                    <p class="text">Customers</p>
+                </a>
+
+                <a href="/orders.html" class="link">
+                    <i class="fa-solid fa-box"></i>
+                    <p class="text">Orders</p>
+                </a>
+            </div>
+
+            <button class="logout">Logout</button>
+        </section>
+
+        <section class="right">
+            <header>
+                <button class="toggle-sidebar"><i class="fa-solid fa-bars"></i></button>
+
+                <h1>Dashboard</h1>
+
+                <div class="user-profile">
+                    <img src="/resources/profile.webp" alt="profile">
+                    <div class="info">
+                        <p class="name"></p>
+                        <p class="desc">Super Admin</p>
+                    </div>
+                </div>
+            </header>
+
+            <div class="content-area">
+                <div class="container">
+                    <h1>Total Numbers</h1>
+
+                    <div class="numbers-holder">
+                        <div class="number normal">
+                            <div class="text-info customers">
+                                <h3>0</h3>
+                                <p class="desc">Customers</p>
+                            </div>
+
+                            <i class="fa-solid fa-user-group"></i>
+                        </div>
+
+                        <div class="number normal">
+                            <div class="text-info products">
+                                <h3>0</h3>
+                                <p class="desc">Products</p>
+                            </div>
+
+                            <i class="fa-solid fa-shirt"></i>
+                        </div>
+
+                        <div class="number normal">
+                            <div class="text-info orders">
+                                <h3>0</h3>
+                                <p class="desc">Orders</p>
+                            </div>
+
+                            <i class="fa-solid fa-box"></i>
+                        </div>
+
+                        <div class="number green">
+                            <div class="text-info revenue">
+                                <h3>0</h3>
+                                <p class="desc">Revenue</p>
+                            </div>
+
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <h1>Orders</h1>
+
+                    <div class="numbers-holder">
+                        <div class="number blue">
+                            <div class="text-info pending">
+                                <h3>0</h3>
+                                <p class="desc">Pending</p>
+                            </div>
+
+                            <i class="fa-solid fa-tag"></i>
+                        </div>
+
+                        <div class="number orange">
+                            <div class="text-info processing">
+                                <h3>0</h3>
+                                <p class="desc">Processing</p>
+                            </div>
+
+                            <i class="fa-solid fa-gear"></i>
+                        </div>
+
+                        <div class="number green">
+                            <div class="text-info completed">
+                                <h3>0</h3>
+                                <p class="desc">Completed</p>
+                            </div>
+
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+
+                        <div class="number red">
+                            <div class="text-info rejected">
+                                <h3>0</h3>
+                                <p class="desc">Rejected</p>
+                            </div>
+
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="/js/sidebar.js" type="module"></script>
+    <script src="/js/dashboard.js" type="module"></script>
+</body>
+
+</html>

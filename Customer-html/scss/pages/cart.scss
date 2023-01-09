@@ -1,0 +1,294 @@
+@import "../default.scss";
+@import "../header.scss";
+@import "../footer.scss";
+
+html {
+  position: relative;
+}
+
+.main-container {
+  display: flex;
+  padding: 4rem;
+}
+
+.product-area {
+  width: 65%;
+  max-width: 800px;
+
+  .item {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f3f3f3;
+    padding: 17px 20px;
+    margin-bottom: 2rem;
+
+    .item-image {
+      height: 90px;
+      border-radius: 7px;
+      margin-right: 1rem;
+
+      img {
+        height: 100%;
+      }
+    }
+
+    .title {
+      font-family: "Inter";
+      word-spacing: 2px;
+    }
+
+    .box {
+      margin: auto 2rem;
+
+      .qty {
+        display: flex;
+        min-width: fit-content;
+        align-items: center;
+        width: fit-content;
+        background: #f5f5f5;
+        border-radius: 40rem;
+        font-size: 11px;
+        color: #202020;
+        outline: 2px solid #545454;
+        overflow: hidden;
+        font-weight: bold;
+
+        .reduce {
+          border-right: 2px solid #919191;
+        }
+
+        span {
+          display: inline-block;
+          margin: 0 14px;
+          font-size: 13px;
+        }
+
+        .add {
+          border-left: 2px solid #919191;
+        }
+
+        .reduce,
+        .add {
+          padding: 6px;
+          transition: all 0.2s linear;
+          cursor: pointer;
+
+          &:hover {
+            background: #dddddd;
+          }
+        }
+      }
+
+      .price {
+        font-size: 23px;
+        align-self: center;
+        color: green;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+.payment-area {
+  margin-left: auto;
+  width: 40%;
+  padding-left: 2rem;
+
+  .coupon-area {
+    h4 {
+      margin-bottom: 15px;
+    }
+
+    .promo-code {
+      margin-bottom: 2rem;
+      display: none;
+
+      span {
+        color: green;
+        text-transform: uppercase;
+      }
+
+      &.active {
+        display: block;
+      }
+    }
+
+    .input-box {
+      display: flex;
+      min-height: 28px;
+      width: 60%;
+      min-width: 300px;
+      border-radius: 10px;
+      overflow: hidden;
+      outline: 2px solid #fd1745;
+      margin-bottom: 2rem;
+
+      input {
+        width: 100%;
+        border: none;
+        font-size: 18px;
+        padding: 0 14px;
+      }
+
+      .submit {
+        border: none;
+        background: #fd1745;
+        color: white;
+        font-size: 15px;
+        padding: 11px 15px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .charges {
+    line-height: 2;
+    color: #363636;
+    font-size: 15px;
+
+    .item {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .total-amt {
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+
+  .checkout {
+    margin-top: 3rem;
+    width: 100%;
+    padding: 20px 0;
+    font-size: 21px;
+    font-weight: bold;
+    background: #fd1745;
+    color: white;
+    border: none;
+    transform: translateY(-3px);
+    border-radius: 50rem;
+    box-shadow: 4px 3px 8px #9b9b9b;
+    outline: 2px solid white;
+    outline-offset: -7px;
+    cursor: pointer;
+    transition: all 0.2s linear;
+
+    i {
+      margin-right: 1rem;
+    }
+
+    &:hover {
+      transform: translateY(0);
+      box-shadow: none;
+    }
+  }
+}
+
+.black-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #a7a7a76b;
+  display: none;
+  justify-content: center;
+  z-index: 2;
+
+  &.active {
+    display: flex;
+  }
+
+  .success-msg {
+    position: fixed;
+    height: fit-content;
+    background: #ffffff;
+    margin-top: 4rem;
+    border-radius: 2rem;
+    width: 380px;
+
+    img {
+      width: 100%;
+    }
+
+    .msg {
+      padding: 0 2rem;
+      font-size: 22px;
+      margin-top: 1rem;
+    }
+
+    .text {
+      padding: 0 2rem;
+      margin: 1rem 0 2rem;
+      color: #4c4c4c;
+      line-height: 1.5;
+    }
+
+    .container {
+      width: 100%;
+      padding: 0 2rem 2rem;
+
+      .close {
+        width: 100%;
+        background: #427801;
+        transition: all 0.2s linear;
+        border: none;
+        padding: 10px 0;
+        font-size: 20px;
+        font-weight: bold;
+        border-radius: 10px;
+        color: white;
+        cursor: pointer;
+
+        &:hover {
+          background: #6a9a32;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1030px) {
+  .main-container {
+    flex-direction: column;
+  }
+
+  .product-area {
+    width: 100%;
+    max-width: unset;
+  }
+
+  .payment-area {
+    padding: 0;
+    width: 100%;
+    margin-top: 2rem;
+  }
+}
+
+.close-btn {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #fd1745;
+  border-radius: 40rem;
+  box-shadow: 1px 2px 5px #575757;
+  display: flex;
+  cursor: pointer;
+  transition: all 0.2s linear;
+
+  &:hover {
+    color: #ff2450;
+  }
+
+}

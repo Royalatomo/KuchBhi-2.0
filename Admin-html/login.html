@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | KuchBhi</title>
+    <script src="https://kit.fontawesome.com/2e90a300f2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/pages/login-register.css">
+</head>
+<body>
+    <section class="container">
+        <div class="information">
+            <div class="head">
+                <h1 class="title">Login</h1>
+                <p class="text">Welcome admin please login to your account</p>
+            </div>
+
+            <div class="body">
+
+                <div class="field">
+                    <label for="email">Email*</label>
+                    <input type="email" id="email" placeholder="someone@email.com">
+                </div>
+
+                <div class="field">
+                    <label for="pass">Password*</label>
+
+                    <div class="password">
+                        <input type="password" id="pass" placeholder="xxxxxx">
+                        <i class="fa-solid fa-eye eye"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="msg-box">
+                <p class="err-msg">Username does not exist</p>
+            </div>
+
+            <div class="foot">
+                <button class="login">Login</button>
+                <p class="register">Create New Account? <a href="register.html">Register</a></p>
+            </div>
+        </div>
+
+        <div class="display">
+        </div>
+    </section>
+
+    <script src="/js/login.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KuchBhi | Verify OTP</title>
+    <script src="https://kit.fontawesome.com/2e90a300f2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/pages/verify.css">
+</head>
+<body>
+    <div class="head">
+        <a href="/" class="logo">
+            <img src="/resource/logo.png" alt="KuchBhi Logo">
+        </a>
+        <h1 class="title">Verify OTP</h1>
+        <p class="text">OTP send to your email for verification</p>
+    </div>
+
+    <div class="otp-container">
+        <p id="error">something went wrong</p>
+        <input type="text" id="otp" placeholder="XXXXXX">
+        <button class="submit">Continue</button>
+        <button class="resend">Resend OTP</button>
+    </div>
+
+    <script src="./js/verify.js" type="module"></script>
+</body>
+</html>
