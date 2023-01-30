@@ -6,6 +6,7 @@ Open Admin, Customer folder in vscode and run it throught live server
 
 * pip install fastapi[all]
 * pip install uvicorn
+* pip install hashlib
 
 # Run the setup file (To establish db)
 
