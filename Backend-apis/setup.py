@@ -6,16 +6,16 @@ import connection
 mycon, myCursor = connection.getConnection()
 
 # Checking if db exists
-# myCursor.execute(f"Show {returnDb()}")
+myCursor.execute(f"Show {returnDb()}")
 
-# for db in myCursor:
-#     # if db exists, drop it
-#     if(db[0] == returnDb()):
-#         myCursor.reset()
-#         myCursor.execute(f"DROP DATABASE {returnDb()}")
+for db in myCursor:
+    # if db exists, drop it
+    if(db[0] == returnDb()):
+        myCursor.reset()
+        myCursor.execute(f"DROP DATABASE {returnDb()}")
 
-# # Create new database and use it
-# myCursor.execute(f"CREATE DATABASE {returnDb()}")
+# Create new database and use it
+myCursor.execute(f"CREATE DATABASE {returnDb()}")
 myCursor.execute(f"use {returnDb()}")
 
 # --- Creating Tables ---
