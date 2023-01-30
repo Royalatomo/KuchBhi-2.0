@@ -11,4 +11,4 @@ Open Admin, Customer folder in vscode and run it throught live server
 # Run the setup file (To establish db)
 
 * python setup.py
-* uvicorn main:app --reload --workers 10
+* uvicorn main:app --workers 1
