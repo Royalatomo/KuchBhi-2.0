@@ -1,9 +1,6 @@
 import { host } from "./env.js";
 
 const token = localStorage.getItem("token");
-if (!token) {
-  window.location.href = "/login.html";
-}
 
 async function getInfoAPI() {
   const request = await fetch(host + "/user?token=" + token, {

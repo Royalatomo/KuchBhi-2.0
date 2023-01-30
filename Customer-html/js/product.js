@@ -76,8 +76,6 @@ const updateInfo = async () => {
   const allImgs = []
   const allFav = await getUserFav();
 
-  console.log(allFav);
-
   if (Object.keys(product || {}).length<=0) {
     document.querySelector(".main-product").innerHTML = "<h1>Sorry No Product Found</h1>"
     return;
@@ -116,7 +114,8 @@ const updateInfo = async () => {
   document.querySelector(".main-product .reviews").innerHTML = `<div class="stars">${returnStars(product.stars)}</div>
   <span>(${product.review_count})</span>`
 
-  
+  qtyNum.innerText = product.qty>=1?1:0
+
   const favBtn = document.querySelector(".main-product .favourite");
   favBtn.addEventListener("click", () => {
     if (favBtn.classList.contains("active")) {
@@ -134,21 +133,34 @@ const updateInfo = async () => {
   }
 
   const cartBtn = document.querySelector(".main-product .cart");
-  cartBtn.addEventListener("click", () => saveToCart(productId, parseInt(qtyNum.innerText)));
+  cartBtn.addEventListener("click", () => {
+    if (product.qty === 0)  {
+      alert("Product Out of Stock")
+      return
+    }
+    saveToCart(productId, parseInt(qtyNum.innerText))
+  });
 }
 
 updateInfo();
 
+
+
 addQty.addEventListener("click", () => {
   const currentQty = parseInt(qtyNum.innerText);
   const availableQty = parseInt(document.querySelector(".qty-left span").innerHTML);
-  if (currentQty < 10 && availableQty-currentQty !== 0) {
+
+  if (availableQty === 0) return
+  if (currentQty < 10 && availableQty-currentQty >= 1) {
     qtyNum.innerText = currentQty + 1;
   }
 });
 
 reduceQty.addEventListener("click", () => {
   const currentQty = parseInt(qtyNum.innerText);
+  const availableQty = parseInt(document.querySelector(".qty-left span").innerHTML);
+
+  if (availableQty === 0) return
   if (currentQty > 1) {
     qtyNum.innerText = currentQty - 1;
   }

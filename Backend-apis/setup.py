@@ -6,9 +6,9 @@ import connection
 mycon, myCursor = connection.getConnection()
 
 # Checking if db exists
-myCursor.execute(f"Show {returnDb()}")
+myCursor.execute(f"Show databases")
 
-for db in myCursor:
+for db in myCursor.fetchall():
     # if db exists, drop it
     if(db[0] == returnDb()):
         myCursor.reset()
